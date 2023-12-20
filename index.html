@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Coca-Cola Landing</title>
 </head>
@@ -11,6 +12,7 @@
         <div class="circle"></div>
         <header>
             <a href="#"><img src="assets/logo.png" alt="logo" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
             <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Menu</a></li>
@@ -24,6 +26,18 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita minima amet, porro placeat esse magni ut animi iure eaque id quo quibusdam, facilis quos et aliquid autem exercitationem aspernatur assumenda!</p>
                 <a href="#">Learn More</a>
             </div>
+            <div class="imgBox">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="assets/cocacola1.png" alt="cocacola1"></div>
+                        <div class="swiper-slide"><img src="assets/cocacola2.png" alt="cocacola1"></div>
+                        <div class="swiper-slide"><img src="assets/cocacola3.png" alt="cocacola1"></div>
+                        <div class="swiper-slide"><img src="assets/cocacola4.png" alt="cocacola1"></div>
+                        <div class="swiper-slide"><img src="assets/cocacola5.png" alt="cocacola1"></div>
+                        <div class="swiper-slide"><img src="assets/cocacola6.png" alt="cocacola1"></div>
+                    </div>
+                </div>
+            </div>
         </div>
         <ul class="sci">
             <li><a href="#"><img src="assets/facebook.png" alt="facebook"></a></li>
@@ -31,5 +45,21 @@
             <li><a href="#"><img src="assets/instagram.png" alt="instagram"></a></li>
         </ul>
     </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper', {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            loop: true,
+        });
+
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
 </body>
 </html>
